@@ -20,6 +20,10 @@ public class StepsDefins {
 
 	private static WebDriver driver = null;
 
+	public static final String USERNAME = "YOUR_USERNAME";
+	public static final String ACCESS_KEY = "YOUR_ACCESS_KEY";
+	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
+	
 	// ====== New User Registration ======
 	@Before
 	public void init() {
@@ -72,11 +76,6 @@ public class StepsDefins {
 		driver.findElement(By.name("pie_submit")).click();
 	}
 
-	@When("^I receive \"([^\"]*)\"$")
-	public void i_receive(String arg1) throws Throwable {
-		String message = driver.findElement(By.className("show_pie_register_error_js")).getText();
-		assertEquals("* Thank you for your registration.", message);
-	}
 
 	// Successful Registration
 	@Then("^I should be registered successfully$")
