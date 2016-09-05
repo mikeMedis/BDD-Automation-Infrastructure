@@ -1,44 +1,72 @@
 package com.medis.bdd;
 
 import cucumber.api.DataTable;
+import cucumber.api.Scenario;
 
-import cucumber.api.java.Before;
+import java.io.*;
+
+
 import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import org.apache.http.client.ClientProtocolException;
+import org.json.JSONException;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.Select;
-import org.junit.Test;
-import com.saucelabs.common.Utils;
-import java.net.URL;
-import java.util.List;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
-import static org.junit.Assert.assertEquals;
+import com.saucelabs.saucerest.SauceREST;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+import java.net.URL;
+
+import static junit.framework.TestCase.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class StepsDefinitions {
-	private static WebDriver driver = null;
+	public static final String USERNAME = "SAUCE_USER_NAME";
+	public static final String ACCESS_KEY = "SAUCE_ACCESS_KEY";
+	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
+	public static WebDriver driver;
+	public String sessionId;
+	public boolean testResults;
+	public String jobName;
 
-	@Before
-	public void setUpSauce() throws Exception {
-		System.setProperty("webdriver.chrome.driver", "/Users/MikeX/Downloads/chromedriver");
-
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability("version", Utils.readPropertyOrEnv("SELENIUM_VERSION", "4"));
-		capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "OS X 10.9"));
-		capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "chrome"));
-		capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
-		String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "MikeX");
-		String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "0eddcc0d-5b71-49fb-a8a2-ba695d945326");
-		driver = new RemoteWebDriver(new URL("http://" + username + ":" + accessKey + "@localhost:4445/wd/hub"),
-				capabilities);
+	public void UpdateResults(boolean testResults) throws JSONException, ClientProtocolException, IOException {
+		SauceREST saucerest = new SauceREST(USERNAME, ACCESS_KEY);
+		Map<String, Object> updates = new HashMap<String, Object>();
+		updates.put("passed", testResults);
+		saucerest.updateJobInfo(sessionId, updates);
 	}
 
+
+	@Before
+	public void setUpSauce(Scenario scenario) throws Exception {
+
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("platform", System.getenv("platform"));
+		caps.setCapability("browserName", System.getenv("browserName"));
+		caps.setCapability("version", System.getenv("version"));
+		caps.setCapability("name", scenario.getName());
+
+		driver = new RemoteWebDriver(new URL(URL), caps);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+		jobName = caps.getCapability("name").toString();
+
+		sessionId = (((RemoteWebDriver) driver).getSessionId()).toString();
+		testResults = false;
+	}
 
 	// ====== New User Registration ======
 
@@ -61,22 +89,22 @@ public class StepsDefinitions {
 		driver.findElement(By.name("description")).sendKeys(data.get(6).get(1));
 		driver.findElement(By.name("password")).sendKeys(data.get(7).get(1));
 		driver.findElement(By.id("confirm_password_password_2")).sendKeys(data.get(8).get(1));
-		
+
 		WebElement mStatus = driver.findElement(By.cssSelector("input[value='married']"));
 		mStatus.click();
-		
+
 		WebElement Hobby = driver.findElement(By.cssSelector("input[value='reading']"));
 		Hobby.click();
-		
+
 		Select country = new Select(driver.findElement(By.id("dropdown_7")));
 		country.selectByValue("Barbados");
-		
+
 		Select Month = new Select(driver.findElement(By.id("yy_date_8")));
 		Month.selectByIndex(3);
-		
+
 		Select Day = new Select(driver.findElement(By.id("yy_date_8")));
 		Day.selectByIndex(12);
-		
+
 		Select Year = new Select(driver.findElement(By.id("yy_date_8")));
 		Year.selectByIndex(19);
 	}
@@ -112,9 +140,9 @@ public class StepsDefinitions {
 		driver.findElement(By.name("description")).sendKeys(data.get(6).get(1));
 		driver.findElement(By.name("password")).sendKeys(data.get(6).get(1));
 		driver.findElement(By.id("confirm_password_password_2")).sendKeys(data.get(7).get(1));
-		
+
 		driver.findElement(By.name("pie_submit")).click();
-		
+
 	}
 
 
@@ -150,12 +178,12 @@ public class StepsDefinitions {
 		String error = emailError.getText();
 		assertEquals("* Invalid email address", error);
 	}
-	
+
 	@When("^When I enter \"(^\"]*)\" into the password input field$")
 	public void shortPassword(String arg1) throws Throwable {
 		driver.findElement(By.name("password")).sendKeys("pa%wao");
 	}
-	
+
 	@Then("I should receive short password \"(^\"]*)\" message")
 	public void shortPasswordMessage(String arg1) throws Throwable {
 		WebElement shortError = driver.findElement(By.className("legend_txt"));
@@ -194,22 +222,22 @@ public class StepsDefinitions {
 		driver.findElement(By.name("description")).sendKeys(data.get(6).get(1));
 		driver.findElement(By.name("password")).sendKeys(data.get(7).get(1));
 		driver.findElement(By.id("confirm_password_password_2")).sendKeys(data.get(8).get(1));
-		
+
 		WebElement mStatus = driver.findElement(By.cssSelector("input[value='married']"));
 		mStatus.click();
-		
+
 		WebElement Hobby = driver.findElement(By.cssSelector("input[value='reading']"));
 		Hobby.click();
-		
+
 		Select country = new Select(driver.findElement(By.id("dropdown_7")));
 		country.selectByValue("Barbados");
-		
+
 		Select Month = new Select(driver.findElement(By.id("mm_date_8")));
 		Month.selectByIndex(8);
-		
+
 		Select Day = new Select(driver.findElement(By.id("dd_date_8")));
 		Day.selectByIndex(11);
-		
+
 		Select Year = new Select(driver.findElement(By.id("yy_date_8")));
 		Year.selectByIndex(10);
 	}
@@ -219,7 +247,7 @@ public class StepsDefinitions {
 		String error = driver.findElement(By.id("show_pie_register_error_js")).getText();
 		assertEquals("Error: Username already exists", error);
 	}
-
+	
 	// ====== E-mail is already taken
 	@Given("^a user has successfully registered with \"([^\"]*)\" as a E-mail$")
 	public void a_user_has_successfully_registered_with_as_a_E_mail(String arg1) throws Throwable {
@@ -239,16 +267,16 @@ public class StepsDefinitions {
 		driver.findElement(By.name("description")).sendKeys(data.get(6).get(1));
 		driver.findElement(By.name("password")).sendKeys(data.get(7).get(1));
 		driver.findElement(By.id("confirm_password_password_2")).sendKeys(data.get(8).get(1));
-		
+
 		WebElement mStatus = driver.findElement(By.cssSelector("input[value='married']"));
 		mStatus.click();
-		
+
 		WebElement Hobby = driver.findElement(By.cssSelector("input[value='reading']"));
 		Hobby.click();
-		
+
 		Select country = new Select(driver.findElement(By.id("dropdown_7")));
 		country.selectByIndex(12);
-		
+
 		Select Year = new Select(driver.findElement(By.id("yy_date_8")));
 		Year.selectByIndex(20);
 	}
@@ -274,5 +302,3 @@ public class StepsDefinitions {
 	}
 
 }
-
-

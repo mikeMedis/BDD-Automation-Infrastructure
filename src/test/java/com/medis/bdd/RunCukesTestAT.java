@@ -7,10 +7,10 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 
 @CucumberOptions(
-		format = {"pretty", "json:target/json/output.json", "html:target/html/"},
-		features = "src/test/resources"
-		)
+	format = {"pretty", "json:target/json/output.json", "html:target/html/"},
+	features = "src/test/resources"
+)
 
-public class RunCukesTest {
+public class RunCukesTestAT {
 
 }
