@@ -11,6 +11,6 @@ import cucumber.api.junit.Cucumber;
 		features = "src/test/resources"
 		)
 
-public class RunnerRegistrationTest {
+public class RunCukesTest {
 
 }

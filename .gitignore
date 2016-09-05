@@ -3,3 +3,6 @@
 .settings/
 target/
 config.yml
+RunnerRegistrationTest.yaml
+.idea
+bdd.iml

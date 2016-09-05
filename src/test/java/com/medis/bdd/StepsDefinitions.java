@@ -1,35 +1,46 @@
 package com.medis.bdd;
 
-import java.util.List;
-
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
-
-import static org.junit.Assert.assertEquals;
-
 import cucumber.api.DataTable;
+
 import cucumber.api.java.Before;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
+import org.junit.Test;
+import com.saucelabs.common.Utils;
+import java.net.URL;
+import java.util.List;
 
-public class StepsDefins {
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
+public class StepsDefinitions {
 	private static WebDriver driver = null;
 
-	public static final String USERNAME = "YOUR_USERNAME";
-	public static final String ACCESS_KEY = "YOUR_ACCESS_KEY";
-	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
-	
-	// ====== New User Registration ======
 	@Before
-	public void init() {
-		System.setProperty("webdriver.chrome.driver", "/Users/Michael/Downloads/chromedriver");
-		driver = new ChromeDriver();
+	public void setUpSauce() throws Exception {
+		System.setProperty("webdriver.chrome.driver", "/Users/MikeX/Downloads/chromedriver");
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("version", Utils.readPropertyOrEnv("SELENIUM_VERSION", "4"));
+		capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "OS X 10.9"));
+		capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "chrome"));
+		capabilities.setCapability("build", System.getenv("JOB_NAME") + "__" + System.getenv("BUILD_NUMBER"));
+		String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "MikeX");
+		String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "0eddcc0d-5b71-49fb-a8a2-ba695d945326");
+		driver = new RemoteWebDriver(new URL("http://" + username + ":" + accessKey + "@localhost:4445/wd/hub"),
+				capabilities);
 	}
+
+
+	// ====== New User Registration ======
 
 	@Given("^I am a new user on the registration page$")
 	public void i_am_a_new_user_on_the_registration_page() throws Throwable {
@@ -247,6 +258,21 @@ public class StepsDefins {
 		String error = driver.findElement(By.id("show_pie_register_error_js")).getText();
 		assertEquals("Error: Email already exists", error);
 	}
-};
+
+	@After
+	public void tearDownLocal() throws Exception {
+		driver.quit();
+	}
+
+	@Test
+	public void fullRun() throws Exception {
+		String sessionId = ((RemoteWebDriver) driver).getSessionId().toString();
+		System.out.println("SauceOnDemandSessionID=" + sessionId);
+		driver.get("http://localhost:8080/cargocpc/");
+		// if the server really hit our Jetty, we should see the same title that includes the secret code.
+		assertTrue(driver.getPageSource().contains("Cargo Ping Component used to verify if the container is started."));
+	}
+
+}
 
 
