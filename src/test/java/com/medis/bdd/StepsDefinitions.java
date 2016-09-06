@@ -14,7 +14,6 @@ import cucumber.api.java.en.When;
 
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,11 +30,11 @@ import java.util.concurrent.TimeUnit;
 import java.net.URL;
 
 import static junit.framework.TestCase.assertEquals;
-import static org.junit.Assert.assertTrue;
+
 
 public class StepsDefinitions {
-	public static final String USERNAME = "SAUCE_USER_NAME";
-	public static final String ACCESS_KEY = "SAUCE_ACCESS_KEY";
+	public static final String USERNAME = "MikeX";
+	public static final String ACCESS_KEY = "0eddcc0d-5b71-49fb-a8a2-ba695d945326";
 	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
 	public static WebDriver driver;
 	public String sessionId;
@@ -173,19 +172,19 @@ public class StepsDefinitions {
 	}
 
 	@Then("^I should receive email \"([^\"]*)\" message$")
-	public void emailMessage(String arg1) throws Throwable {
+	public void email_message(String arg1) throws Throwable {
 		WebElement emailError = driver.findElement(By.className("legend_txt"));
 		String error = emailError.getText();
 		assertEquals("* Invalid email address", error);
 	}
 
 	@When("^When I enter \"(^\"]*)\" into the password input field$")
-	public void shortPassword(String arg1) throws Throwable {
+	public void short_password(String arg1) throws Throwable {
 		driver.findElement(By.name("password")).sendKeys("pa%wao");
 	}
 
 	@Then("I should receive short password \"(^\"]*)\" message")
-	public void shortPasswordMessage(String arg1) throws Throwable {
+	public void short_password_message(String arg1) throws Throwable {
 		WebElement shortError = driver.findElement(By.className("legend_txt"));
 		String error = shortError.getText();
 		assertEquals("* Minimum 8 characters required", error);
@@ -198,7 +197,7 @@ public class StepsDefinitions {
 	}
 
 	@Then("^I should receive mismatched passwords \"([^\"]*)\" message$")
-	public void passwordMessage(String arg1) throws Throwable {
+	public void password_message(String arg1) throws Throwable {
 		WebElement Mismatched = driver.findElement(By.className("legend_txt"));
 		String error = Mismatched.getText();
 		assertEquals("* Fields do not match", error);
@@ -247,7 +246,7 @@ public class StepsDefinitions {
 		String error = driver.findElement(By.id("show_pie_register_error_js")).getText();
 		assertEquals("Error: Username already exists", error);
 	}
-	
+
 	// ====== E-mail is already taken
 	@Given("^a user has successfully registered with \"([^\"]*)\" as a E-mail$")
 	public void a_user_has_successfully_registered_with_as_a_E_mail(String arg1) throws Throwable {
@@ -291,14 +290,4 @@ public class StepsDefinitions {
 	public void tearDownLocal() throws Exception {
 		driver.quit();
 	}
-
-	@Test
-	public void fullRun() throws Exception {
-		String sessionId = ((RemoteWebDriver) driver).getSessionId().toString();
-		System.out.println("SauceOnDemandSessionID=" + sessionId);
-		driver.get("http://localhost:8080/cargocpc/");
-		// if the server really hit our Jetty, we should see the same title that includes the secret code.
-		assertTrue(driver.getPageSource().contains("Cargo Ping Component used to verify if the container is started."));
-	}
-
 }

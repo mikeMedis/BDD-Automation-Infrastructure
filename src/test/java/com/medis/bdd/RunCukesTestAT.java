@@ -6,9 +6,9 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(
-	format = {"pretty", "json:target/json/output.json", "html:target/html/"},
-	features = "src/test/resources"
+@CucumberOptions(tags = {"@Register"},
+		format = {"pretty", "json:target/json/output.json", "html:target/html/"},
+		features = "src/test/resources"
 )
 
 public class RunCukesTestAT {
