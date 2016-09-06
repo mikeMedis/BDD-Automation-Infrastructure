@@ -13,7 +13,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 6435233586,
+  "duration": 7596827989,
   "status": "passed"
 });
 formatter.background({
@@ -32,7 +32,7 @@ formatter.match({
   "location": "StepsDefinitions.i_am_a_new_user_on_the_registration_page()"
 });
 formatter.result({
-  "duration": 1668612462,
+  "duration": 2712419202,
   "status": "passed"
 });
 formatter.scenario({
@@ -127,29 +127,29 @@ formatter.match({
   "location": "StepsDefinitions.i_fill_field_with_the_following_data(DataTable)"
 });
 formatter.result({
-  "duration": 11458188110,
+  "duration": 12626052983,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_click_the_submit_button()"
 });
 formatter.result({
-  "duration": 1399105788,
+  "duration": 2146211501,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_should_be_registered_successfully()"
 });
 formatter.result({
-  "duration": 103007684,
+  "duration": 130695765,
   "status": "passed"
 });
 formatter.after({
-  "duration": 171397712,
+  "duration": 196976619,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6694915234,
+  "duration": 7408724902,
   "status": "passed"
 });
 formatter.background({
@@ -168,7 +168,7 @@ formatter.match({
   "location": "StepsDefinitions.i_am_a_new_user_on_the_registration_page()"
 });
 formatter.result({
-  "duration": 2190808329,
+  "duration": 1869404518,
   "status": "passed"
 });
 formatter.scenario({
@@ -256,14 +256,14 @@ formatter.match({
   "location": "StepsDefinitions.i_leave_field_empty_with_no_data(DataTable)"
 });
 formatter.result({
-  "duration": 3631065469,
+  "duration": 4492113093,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_click_the_submit_button()"
 });
 formatter.result({
-  "duration": 366702553,
+  "duration": 479367235,
   "status": "passed"
 });
 formatter.match({
@@ -276,15 +276,15 @@ formatter.match({
   "location": "StepsDefinitions.i_should_receive_message(String)"
 });
 formatter.result({
-  "duration": 226121681,
+  "duration": 249122905,
   "status": "passed"
 });
 formatter.after({
-  "duration": 165226949,
+  "duration": 166011492,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6391079161,
+  "duration": 6703847576,
   "status": "passed"
 });
 formatter.background({
@@ -303,7 +303,7 @@ formatter.match({
   "location": "StepsDefinitions.i_am_a_new_user_on_the_registration_page()"
 });
 formatter.result({
-  "duration": 1097839331,
+  "duration": 1409940284,
   "status": "passed"
 });
 formatter.scenario({
@@ -343,14 +343,14 @@ formatter.match({
   "location": "StepsDefinitions.i_enter_in_the_phone_number_input_field(int,int)"
 });
 formatter.result({
-  "duration": 441981610,
+  "duration": 471885759,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_click_the_submit_button()"
 });
 formatter.result({
-  "duration": 470643663,
+  "duration": 746028963,
   "status": "passed"
 });
 formatter.match({
@@ -363,15 +363,15 @@ formatter.match({
   "location": "StepsDefinitions.phoneErrorMessage(String)"
 });
 formatter.result({
-  "duration": 241169372,
+  "duration": 238896535,
   "status": "passed"
 });
 formatter.after({
-  "duration": 159270718,
+  "duration": 161358493,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6873286179,
+  "duration": 10277140862,
   "status": "passed"
 });
 formatter.background({
@@ -390,7 +390,7 @@ formatter.match({
   "location": "StepsDefinitions.i_am_a_new_user_on_the_registration_page()"
 });
 formatter.result({
-  "duration": 1082157509,
+  "duration": 1637759816,
   "status": "passed"
 });
 formatter.scenario({
@@ -426,14 +426,14 @@ formatter.match({
   "location": "StepsDefinitions.i_enter_in_the_e_mail_input_field(String)"
 });
 formatter.result({
-  "duration": 462521985,
+  "duration": 583774596,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_click_the_submit_button()"
 });
 formatter.result({
-  "duration": 441403349,
+  "duration": 579286780,
   "status": "passed"
 });
 formatter.match({});
@@ -441,11 +441,11 @@ formatter.result({
   "status": "undefined"
 });
 formatter.after({
-  "duration": 161505954,
+  "duration": 200155262,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6972112504,
+  "duration": 15764012317,
   "status": "passed"
 });
 formatter.background({
@@ -464,7 +464,7 @@ formatter.match({
   "location": "StepsDefinitions.i_am_a_new_user_on_the_registration_page()"
 });
 formatter.result({
-  "duration": 1029929364,
+  "duration": 1309905734,
   "status": "passed"
 });
 formatter.scenario({
@@ -505,7 +505,7 @@ formatter.result({
   "status": "undefined"
 });
 formatter.after({
-  "duration": 166454567,
+  "duration": 195658322,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -557,7 +557,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 6541338219,
+  "duration": 6899509937,
   "status": "passed"
 });
 formatter.background({
@@ -576,7 +576,7 @@ formatter.match({
   "location": "StepsDefinitions.i_am_a_new_user_on_the_registration_page()"
 });
 formatter.result({
-  "duration": 1117352298,
+  "duration": 1461477315,
   "status": "passed"
 });
 formatter.scenario({
@@ -626,14 +626,14 @@ formatter.match({
   "location": "StepsDefinitions.i_enter_and(String,String)"
 });
 formatter.result({
-  "duration": 1141739585,
+  "duration": 983858524,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_click_the_submit_button()"
 });
 formatter.result({
-  "duration": 428598907,
+  "duration": 478204195,
   "status": "passed"
 });
 formatter.match({
@@ -646,15 +646,15 @@ formatter.match({
   "location": "StepsDefinitions.password_message(String)"
 });
 formatter.result({
-  "duration": 219186143,
+  "duration": 246361164,
   "status": "passed"
 });
 formatter.after({
-  "duration": 168868717,
+  "duration": 173842577,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6368481415,
+  "duration": 52900292556,
   "status": "passed"
 });
 formatter.background({
@@ -673,7 +673,7 @@ formatter.match({
   "location": "StepsDefinitions.i_am_a_new_user_on_the_registration_page()"
 });
 formatter.result({
-  "duration": 1342210458,
+  "duration": 1637257378,
   "status": "passed"
 });
 formatter.scenario({
@@ -779,21 +779,21 @@ formatter.match({
   "location": "StepsDefinitions.a_user_has_successfully_registered_with_as_a_username(String)"
 });
 formatter.result({
-  "duration": 109461524,
+  "duration": 117641221,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_enter_valid_data_on_the_page_in_each_field(DataTable)"
 });
 formatter.result({
-  "duration": 11416622377,
+  "duration": 12237639562,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_click_the_submit_button()"
 });
 formatter.result({
-  "duration": 1572117282,
+  "duration": 2040705403,
   "status": "passed"
 });
 formatter.match({
@@ -806,16 +806,16 @@ formatter.match({
   "location": "StepsDefinitions.i_should_receive(String)"
 });
 formatter.result({
-  "duration": 217629483,
+  "duration": 229937058,
   "error_message": "junit.framework.ComparisonFailure: expected:\u003c[Error: Username already exists]\u003e but was:\u003c[]\u003e\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\tat junit.framework.TestCase.assertEquals(TestCase.java:269)\n\tat com.medis.bdd.StepsDefinitions.i_should_receive(StepsDefinitions.java:247)\n\tat ✽.Then I should receive username message \"Error: Username already exists\"(Registration.feature:72)\n",
   "status": "failed"
 });
 formatter.after({
-  "duration": 157347347,
+  "duration": 182433882,
   "status": "passed"
 });
 formatter.before({
-  "duration": 6202706239,
+  "duration": 7248058087,
   "status": "passed"
 });
 formatter.background({
@@ -834,7 +834,7 @@ formatter.match({
   "location": "StepsDefinitions.i_am_a_new_user_on_the_registration_page()"
 });
 formatter.result({
-  "duration": 1569193756,
+  "duration": 2005335014,
   "status": "passed"
 });
 formatter.scenario({
@@ -940,21 +940,21 @@ formatter.match({
   "location": "StepsDefinitions.a_user_has_successfully_registered_with_as_a_E_mail(String)"
 });
 formatter.result({
-  "duration": 109837816,
+  "duration": 123123297,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_register_with_valid_data_on_the_page_in_each_field(DataTable)"
 });
 formatter.result({
-  "duration": 9579310119,
+  "duration": 11036705811,
   "status": "passed"
 });
 formatter.match({
   "location": "StepsDefinitions.i_click_the_submit_button()"
 });
 formatter.result({
-  "duration": 1516859074,
+  "duration": 1735501080,
   "status": "passed"
 });
 formatter.match({});
@@ -962,7 +962,7 @@ formatter.result({
   "status": "undefined"
 });
 formatter.after({
-  "duration": 155978020,
+  "duration": 171272125,
   "status": "passed"
 });
 });

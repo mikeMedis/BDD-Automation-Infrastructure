@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.medis.bdd.RunCukesTestAT" time="111.357" tests="45" errors="0" skipped="8" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.medis.bdd.RunCukesTestAT" time="182.992" tests="45" errors="0" skipped="8" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib"/>
@@ -61,23 +61,23 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Given I am a new user on the registration page" classname="Scenario: Verify that registration is a successful" time="0.012"/>
+  <testcase name="Given I am a new user on the registration page" classname="Scenario: Verify that registration is a successful" time="0.009"/>
   <testcase name="When I fill field with the following data" classname="Scenario: Verify that registration is a successful" time="0"/>
   <testcase name="And I click the submit button" classname="Scenario: Verify that registration is a successful" time="0"/>
   <testcase name="Then I should be registered successfully" classname="Scenario: Verify that registration is a successful" time="0"/>
-  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.175"/>
+  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.198"/>
   <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid Registration Empty Field Message" time="0"/>
-  <testcase name="When I leave field empty with no data" classname="Scenario: Invalid Registration Empty Field Message" time="0.001"/>
+  <testcase name="When I leave field empty with no data" classname="Scenario: Invalid Registration Empty Field Message" time="0"/>
   <testcase name="And I click the submit button" classname="Scenario: Invalid Registration Empty Field Message" time="0"/>
   <testcase name="Then I should receive field required &quot;* This field is required&quot; message" classname="Scenario: Invalid Registration Empty Field Message" time="0"/>
-  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0.168"/>
+  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0.167"/>
   <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid phone_number" time="0"/>
   <testcase name="When I enter 000-6786 in the phone_number input field" classname="Scenario: Invalid phone_number" time="0"/>
   <testcase name="And I click the submit button" classname="Scenario: Invalid phone_number" time="0"/>
   <testcase name="Then I should receive phone &quot;* Minimum 10 Digits starting with Country Code&quot; message" classname="Scenario: Invalid phone_number" time="0"/>
-  <testcase name="Scenario: Invalid phone_number" classname="Scenario: Invalid phone_number" time="0.161"/>
+  <testcase name="Scenario: Invalid phone_number" classname="Scenario: Invalid phone_number" time="0.163"/>
   <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid E-mail" time="0"/>
-  <testcase name="When I enter &quot;mikemedis@mikemedis&quot; in the e_mail input field" classname="Scenario: Invalid E-mail" time="0.001"/>
+  <testcase name="When I enter &quot;mikemedis@mikemedis&quot; in the e_mail input field" classname="Scenario: Invalid E-mail" time="0"/>
   <testcase name="And I click the submit button" classname="Scenario: Invalid E-mail" time="0"/>
   <testcase name="Then I should receive email &quot;* Invalid email address&quot;	 message" classname="Scenario: Invalid E-mail" time="0">
     <skipped/>
@@ -85,7 +85,7 @@
   <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.164"/>
+  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.204"/>
   <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid Password" time="0"/>
   <testcase name="When I enter &quot;passWod&quot; into the password input field" classname="Scenario: Invalid Password" time="0">
     <skipped/>
@@ -103,14 +103,14 @@
   <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.171"/>
+  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.199"/>
   <testcase name="Given I am a new user on the registration page" classname="| pa$$word | tHis$isMyPa$$ |" time="0"/>
   <testcase name="When I enter &quot;pa$$word&quot; and &quot;tHis$isMyPa$$&quot;" classname="| pa$$word | tHis$isMyPa$$ |" time="0"/>
   <testcase name="And I click the submit button" classname="| pa$$word | tHis$isMyPa$$ |" time="0"/>
   <testcase name="Then I should receive mismatched passwords &quot;* Fields do not match&quot; message" classname="| pa$$word | tHis$isMyPa$$ |" time="0"/>
-  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0.171"/>
+  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0.175"/>
   <testcase name="Given I am a new user on the registration page" classname="Scenario: Duplicate Username Error Message" time="0"/>
-  <testcase name="Given a user has successfully registered with &quot;MMedis&quot; as a username" classname="Scenario: Duplicate Username Error Message" time="0.001"/>
+  <testcase name="Given a user has successfully registered with &quot;MMedis&quot; as a username" classname="Scenario: Duplicate Username Error Message" time="0"/>
   <testcase name="When I enter valid data on the page in each field" classname="Scenario: Duplicate Username Error Message" time="0"/>
   <testcase name="And I click the submit button" classname="Scenario: Duplicate Username Error Message" time="0"/>
   <testcase name="Then I should receive username message &quot;Error: Username already exists&quot;" classname="Scenario: Duplicate Username Error Message" time="0.014">
@@ -131,5 +131,5 @@
   <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0.158"/>
+  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0.172"/>
 </testsuite>
