@@ -59,10 +59,6 @@ public class StepsDefinitions {
 		caps.setCapability("version", System.getenv("version"));
 		caps.setCapability("name", scenario.getName());
 
-		caps.setBrowserName(System.getenv("SELENIUM_BROWSER"));
-		caps.setVersion(System.getenv("SELENIUM_VERSION"));
-		caps.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
-
 		driver = new RemoteWebDriver(new URL(URL), caps);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
@@ -292,9 +288,7 @@ public class StepsDefinitions {
 	}
 
 	@After
-	public void tearDownLocal() throws IOException, JSONException {
+	public void tearDownLocal() {
 		driver.quit();
-		UpdateResults(testResults);
-		System.out.println("SauceOnDemandSessionID="+ sessionId + "job-name=");
 	}
 }
