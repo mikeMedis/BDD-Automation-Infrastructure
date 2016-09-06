@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.medis.bdd.RunCukesTestAT" time="1.009" tests="53" errors="16" skipped="37" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.medis.bdd.RunCukesTestAT" time="1.016" tests="53" errors="16" skipped="37" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib"/>
@@ -61,7 +61,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.084">
+  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.083">
     <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
 </error>
     <system-out><![CDATA[@Register
@@ -69,7 +69,7 @@ Feature: User Registration
   I would like to successfully register
 ]]></system-out>
   </testcase>
-  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.103">
+  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.113">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 </error>
   </testcase>
@@ -81,7 +81,7 @@ Feature: User Registration
 	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
 	at org.openqa.selenium.Platform.fromString(Platform.java:276)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -126,7 +126,7 @@ Feature: User Registration
       	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
       	at org.openqa.selenium.Platform.fromString(Platform.java:276)
       	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -181,12 +181,12 @@ Feature: User Registration
   <testcase name="Then I should be registered successfully" classname="Scenario: Verify that registration is a successful" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0.003">
+  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0">
     <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
 </error>
     <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
 &amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
-	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -227,7 +227,7 @@ Feature: User Registration
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 &amp#27;[0m
       &amp#27;[31mjava.lang.NullPointerException
-      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -269,7 +269,7 @@ Feature: User Registration
       &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0.029">
+  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0.023">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 </error>
   </testcase>
@@ -281,7 +281,7 @@ Feature: User Registration
 	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
 	at org.openqa.selenium.Platform.fromString(Platform.java:276)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -326,7 +326,7 @@ Feature: User Registration
       	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
       	at org.openqa.selenium.Platform.fromString(Platform.java:276)
       	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -391,7 +391,7 @@ Feature: User Registration
 </error>
     <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
 &amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
-	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -432,7 +432,7 @@ Feature: User Registration
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 &amp#27;[0m
       &amp#27;[31mjava.lang.NullPointerException
-      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -486,7 +486,7 @@ Feature: User Registration
 	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
 	at org.openqa.selenium.Platform.fromString(Platform.java:276)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -531,7 +531,7 @@ Feature: User Registration
       	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
       	at org.openqa.selenium.Platform.fromString(Platform.java:276)
       	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -591,12 +591,12 @@ Feature: User Registration
   <testcase name="Then I should receive phone &quot;* Minimum 10 Digits starting with Country Code&quot; message" classname="Scenario: Invalid phone_number" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.007">
+  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.003">
     <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
 </error>
     <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
 &amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
-	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -637,7 +637,7 @@ Feature: User Registration
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 &amp#27;[0m
       &amp#27;[31mjava.lang.NullPointerException
-      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -679,7 +679,7 @@ Feature: User Registration
       &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.043">
+  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.028">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 </error>
   </testcase>
@@ -687,7 +687,7 @@ Feature: User Registration
     <skipped/>
     <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
 &amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
-	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -728,7 +728,7 @@ Feature: User Registration
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 &amp#27;[0m
       &amp#27;[31mjava.lang.NullPointerException
-      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -778,7 +778,7 @@ Feature: User Registration
 	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
 	at org.openqa.selenium.Platform.fromString(Platform.java:276)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -823,7 +823,7 @@ Feature: User Registration
       	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
       	at org.openqa.selenium.Platform.fromString(Platform.java:276)
       	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -883,11 +883,11 @@ Feature: User Registration
   <testcase name="Then I should receive email &quot;* Invalid email address&quot;	 message" classname="Scenario: Invalid E-mail" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.007">
+  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.006">
     <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
 </error>
   </testcase>
-  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.027">
+  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.018">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 </error>
   </testcase>
@@ -895,7 +895,7 @@ Feature: User Registration
     <skipped/>
     <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
 &amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
-	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -936,7 +936,7 @@ Feature: User Registration
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 &amp#27;[0m
       &amp#27;[31mjava.lang.NullPointerException
-      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -986,7 +986,7 @@ Feature: User Registration
 	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
 	at org.openqa.selenium.Platform.fromString(Platform.java:276)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1031,7 +1031,7 @@ Feature: User Registration
       	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
       	at org.openqa.selenium.Platform.fromString(Platform.java:276)
       	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1091,7 +1091,7 @@ Feature: User Registration
   <testcase name="Then I should receive short password &quot;* Minimum 8 characters required&quot; message" classname="Scenario: Invalid Password" time="0">
     <skipped/>
   </testcase>
-  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0.003">
+  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0">
     <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
 </error>
     <system-out><![CDATA[
@@ -1108,7 +1108,7 @@ Feature: User Registration
     Examples: 
 ]]></system-out>
   </testcase>
-  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0.022">
+  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0.02">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 </error>
   </testcase>
@@ -1120,7 +1120,7 @@ Feature: User Registration
 	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
 	at org.openqa.selenium.Platform.fromString(Platform.java:276)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1183,7 +1183,7 @@ Feature: User Registration
       	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
       	at org.openqa.selenium.Platform.fromString(Platform.java:276)
       	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1256,12 +1256,12 @@ Feature: User Registration
   <testcase name="Then I should receive mismatched passwords &quot;* Fields do not match&quot; message" classname="| pa$$word | tHis$isMyPa$$ |" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Duplicate Username Error Message" classname="Scenario: Duplicate Username Error Message" time="0">
+  <testcase name="Scenario: Duplicate Username Error Message" classname="Scenario: Duplicate Username Error Message" time="0.003">
     <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
 </error>
     <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
 &amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
-	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1320,7 +1320,7 @@ Feature: User Registration
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 &amp#27;[0m
       &amp#27;[31mjava.lang.NullPointerException
-      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1380,7 +1380,7 @@ Feature: User Registration
       &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Scenario: Duplicate Username Error Message" classname="Scenario: Duplicate Username Error Message" time="0.002">
+  <testcase name="Scenario: Duplicate Username Error Message" classname="Scenario: Duplicate Username Error Message" time="0.016">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 </error>
   </testcase>
@@ -1392,7 +1392,7 @@ Feature: User Registration
 	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
 	at org.openqa.selenium.Platform.fromString(Platform.java:276)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1437,7 +1437,7 @@ Feature: User Registration
       	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
       	at org.openqa.selenium.Platform.fromString(Platform.java:276)
       	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1501,12 +1501,12 @@ Feature: User Registration
   <testcase name="Then I should receive username message &quot;Error: Username already exists&quot;" classname="Scenario: Duplicate Username Error Message" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0">
+  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0.002">
     <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
 </error>
     <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
 &amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
-	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1547,7 +1547,7 @@ Feature: User Registration
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 &amp#27;[0m
       &amp#27;[31mjava.lang.NullPointerException
-      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1589,7 +1589,7 @@ Feature: User Registration
       &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0.038">
+  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0.025">
     <error type="java.lang.NullPointerException">java.lang.NullPointerException
 </error>
   </testcase>
@@ -1597,7 +1597,7 @@ Feature: User Registration
     <skipped/>
     <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
 &amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
-	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1638,7 +1638,7 @@ Feature: User Registration
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
 &amp#27;[0m
       &amp#27;[31mjava.lang.NullPointerException
-      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:296)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1688,7 +1688,7 @@ Feature: User Registration
 	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
 	at org.openqa.selenium.Platform.fromString(Platform.java:276)
 	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1733,7 +1733,7 @@ Feature: User Registration
       	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
       	at org.openqa.selenium.Platform.fromString(Platform.java:276)
       	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
-      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:64)
       	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
       	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
       	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

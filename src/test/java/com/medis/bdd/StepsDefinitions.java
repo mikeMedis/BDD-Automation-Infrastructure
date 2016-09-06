@@ -292,7 +292,7 @@ public class StepsDefinitions {
 	}
 
 	@After
-	public void tearDownLocal() throws Exception {
+	public void tearDownLocal() throws IOException, JSONException {
 		driver.quit();
 		UpdateResults(testResults);
 		System.out.println("SauceOnDemandSessionID="+ sessionId + "job-name=");
