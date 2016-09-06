@@ -17,6 +17,7 @@ import org.json.JSONException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -35,7 +36,7 @@ import static junit.framework.TestCase.assertEquals;
 public class StepsDefinitions {
 	public static final String USERNAME = "MikeX";
 	public static final String ACCESS_KEY = "0eddcc0d-5b71-49fb-a8a2-ba695d945326";
-	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";
+	public static final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@localhost:4445/wd/hub";
 	public static WebDriver driver;
 	public String sessionId;
 	public boolean testResults;
@@ -57,6 +58,10 @@ public class StepsDefinitions {
 		caps.setCapability("browserName", System.getenv("browserName"));
 		caps.setCapability("version", System.getenv("version"));
 		caps.setCapability("name", scenario.getName());
+
+		caps.setBrowserName(System.getenv("SELENIUM_BROWSER"));
+		caps.setVersion(System.getenv("SELENIUM_VERSION"));
+		caps.setCapability(CapabilityType.PLATFORM, System.getenv("SELENIUM_PLATFORM"));
 
 		driver = new RemoteWebDriver(new URL(URL), caps);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -289,5 +294,7 @@ public class StepsDefinitions {
 	@After
 	public void tearDownLocal() throws Exception {
 		driver.quit();
+		UpdateResults(testResults);
+		System.out.println("SauceOnDemandSessionID="+ sessionId + "job-name=");
 	}
 }

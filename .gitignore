@@ -18,3 +18,4 @@ bdd.iml
 
 target/generated-test-sources/
 target
+Makefile

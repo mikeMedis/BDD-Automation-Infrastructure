@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.medis.bdd.RunCukesTestAT" time="182.992" tests="45" errors="0" skipped="8" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.medis.bdd.RunCukesTestAT" time="1.009" tests="53" errors="16" skipped="37" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib"/>
@@ -61,37 +61,1028 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="Given I am a new user on the registration page" classname="Scenario: Verify that registration is a successful" time="0.009"/>
-  <testcase name="When I fill field with the following data" classname="Scenario: Verify that registration is a successful" time="0"/>
-  <testcase name="And I click the submit button" classname="Scenario: Verify that registration is a successful" time="0"/>
-  <testcase name="Then I should be registered successfully" classname="Scenario: Verify that registration is a successful" time="0"/>
-  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.198"/>
-  <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid Registration Empty Field Message" time="0"/>
-  <testcase name="When I leave field empty with no data" classname="Scenario: Invalid Registration Empty Field Message" time="0"/>
-  <testcase name="And I click the submit button" classname="Scenario: Invalid Registration Empty Field Message" time="0"/>
-  <testcase name="Then I should receive field required &quot;* This field is required&quot; message" classname="Scenario: Invalid Registration Empty Field Message" time="0"/>
-  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0.167"/>
-  <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid phone_number" time="0"/>
-  <testcase name="When I enter 000-6786 in the phone_number input field" classname="Scenario: Invalid phone_number" time="0"/>
-  <testcase name="And I click the submit button" classname="Scenario: Invalid phone_number" time="0"/>
-  <testcase name="Then I should receive phone &quot;* Minimum 10 Digits starting with Country Code&quot; message" classname="Scenario: Invalid phone_number" time="0"/>
-  <testcase name="Scenario: Invalid phone_number" classname="Scenario: Invalid phone_number" time="0.163"/>
-  <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid E-mail" time="0"/>
-  <testcase name="When I enter &quot;mikemedis@mikemedis&quot; in the e_mail input field" classname="Scenario: Invalid E-mail" time="0"/>
-  <testcase name="And I click the submit button" classname="Scenario: Invalid E-mail" time="0"/>
-  <testcase name="Then I should receive email &quot;* Invalid email address&quot;	 message" classname="Scenario: Invalid E-mail" time="0">
+  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.084">
+    <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
+</error>
+    <system-out><![CDATA[@Register
+Feature: User Registration
+  I would like to successfully register
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Verify that registration is a successful" classname="Scenario: Verify that registration is a successful" time="0.103">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+</error>
+  </testcase>
+  <testcase name="Given I am a new user on the registration page" classname="Scenario: Verify that registration is a successful" time="0">
     <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in before hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.setUpSauce(Scenario)&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException: Name is null
+      	at java.lang.Enum.valueOf(Enum.java:236)
+      	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+      	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+      	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="When I fill field with the following data" classname="Scenario: Verify that registration is a successful" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+  Background:                                      &amp#27;[90m# Registration.feature:5&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="And I click the submit button" classname="Scenario: Verify that registration is a successful" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I should be registered successfully" classname="Scenario: Verify that registration is a successful" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0.003">
+    <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
+</error>
+    <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Invalid Registration Empty Field Message" classname="Scenario: Invalid Registration Empty Field Message" time="0.029">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+</error>
+  </testcase>
+  <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid Registration Empty Field Message" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in before hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.setUpSauce(Scenario)&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException: Name is null
+      	at java.lang.Enum.valueOf(Enum.java:236)
+      	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+      	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+      	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+
+  Scenario: Verify that registration is a successful &amp#27;[90m# Registration.feature:8&amp#27;[0m
+    &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI fill field with the following data&amp#27;[0m        &amp#27;[90m# StepsDefinitions.i_fill_field_with_the_following_data(DataTable)&amp#27;[0m
+    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click the submit button&amp#27;[0m                    &amp#27;[90m# StepsDefinitions.i_click_the_submit_button()&amp#27;[0m
+    &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should be registered successfully&amp#27;[0m         &amp#27;[90m# StepsDefinitions.i_should_be_registered_successfully()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="When I leave field empty with no data" classname="Scenario: Invalid Registration Empty Field Message" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+  Background:                                      &amp#27;[90m# Registration.feature:5&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="And I click the submit button" classname="Scenario: Invalid Registration Empty Field Message" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I should receive field required &quot;* This field is required&quot; message" classname="Scenario: Invalid Registration Empty Field Message" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Invalid phone_number" classname="Scenario: Invalid phone_number" time="0">
+    <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
+</error>
+    <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Invalid phone_number" classname="Scenario: Invalid phone_number" time="0.004">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+</error>
+  </testcase>
+  <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid phone_number" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in before hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.setUpSauce(Scenario)&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException: Name is null
+      	at java.lang.Enum.valueOf(Enum.java:236)
+      	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+      	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+      	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+
+  Scenario: Invalid Registration Empty Field Message                        &amp#27;[90m# Registration.feature:22&amp#27;[0m
+    &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI leave field empty with no data&amp#27;[0m                                   &amp#27;[90m# StepsDefinitions.i_leave_field_empty_with_no_data(DataTable)&amp#27;[0m
+    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click the submit button&amp#27;[0m                                           &amp#27;[90m# StepsDefinitions.i_click_the_submit_button()&amp#27;[0m
+    &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should receive field required "&amp#27;[0m&amp#27;[36m&amp#27;[1m* This field is required&amp#27;[0m&amp#27;[36m" message&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_should_receive_message(String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="When I enter 000-6786 in the phone_number input field" classname="Scenario: Invalid phone_number" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+  Background:                                      &amp#27;[90m# Registration.feature:5&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="And I click the submit button" classname="Scenario: Invalid phone_number" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I should receive phone &quot;* Minimum 10 Digits starting with Country Code&quot; message" classname="Scenario: Invalid phone_number" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.007">
+    <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
+</error>
+    <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.043">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+</error>
   </testcase>
   <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0">
     <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
   </testcase>
-  <testcase name="Scenario: Invalid E-mail" classname="Scenario: Invalid E-mail" time="0.204"/>
-  <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid Password" time="0"/>
+  <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid E-mail" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in before hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.setUpSauce(Scenario)&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException: Name is null
+      	at java.lang.Enum.valueOf(Enum.java:236)
+      	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+      	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+      	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+
+  Scenario: Invalid phone_number                                                         &amp#27;[90m# Registration.feature:35&amp#27;[0m
+    &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI enter &amp#27;[0m&amp#27;[36m&amp#27;[1m000&amp#27;[0m&amp#27;[36m-&amp#27;[0m&amp#27;[36m&amp#27;[1m6786&amp#27;[0m&amp#27;[36m in the phone_number input field&amp#27;[0m                                &amp#27;[90m# StepsDefinitions.i_enter_in_the_phone_number_input_field(int,int)&amp#27;[0m
+    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click the submit button&amp#27;[0m                                                        &amp#27;[90m# StepsDefinitions.i_click_the_submit_button()&amp#27;[0m
+    &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should receive phone "&amp#27;[0m&amp#27;[36m&amp#27;[1m* Minimum 10 Digits starting with Country Code&amp#27;[0m&amp#27;[36m" message&amp#27;[0m &amp#27;[90m# StepsDefinitions.phoneErrorMessage(String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="When I enter &quot;mikemedis@mikemedis&quot; in the e_mail input field" classname="Scenario: Invalid E-mail" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+  Background:                                      &amp#27;[90m# Registration.feature:5&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="And I click the submit button" classname="Scenario: Invalid E-mail" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I should receive email &quot;* Invalid email address&quot;	 message" classname="Scenario: Invalid E-mail" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.007">
+    <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
+</error>
+  </testcase>
+  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.027">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+</error>
+  </testcase>
+  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Given I am a new user on the registration page" classname="Scenario: Invalid Password" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in before hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.setUpSauce(Scenario)&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException: Name is null
+      	at java.lang.Enum.valueOf(Enum.java:236)
+      	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+      	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+      	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+
+  Scenario: Invalid E-mail                                         &amp#27;[90m# Registration.feature:40&amp#27;[0m
+    &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI enter "&amp#27;[0m&amp#27;[36m&amp#27;[1mmikemedis@mikemedis&amp#27;[0m&amp#27;[36m" in the e_mail input field&amp#27;[0m   &amp#27;[90m# StepsDefinitions.i_enter_in_the_e_mail_input_field(String)&amp#27;[0m
+    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click the submit button&amp#27;[0m                                  &amp#27;[90m# StepsDefinitions.i_click_the_submit_button()&amp#27;[0m
+    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should receive email "* Invalid email address"	 message&amp#27;[0m
+]]></system-out>
+  </testcase>
   <testcase name="When I enter &quot;passWod&quot; into the password input field" classname="Scenario: Invalid Password" time="0">
     <skipped/>
     <system-out><![CDATA[
   Background:                                      &amp#27;[90m# Registration.feature:5&amp#27;[0m
-    &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
 ]]></system-out>
   </testcase>
   <testcase name="And I click the submit button" classname="Scenario: Invalid Password" time="0">
@@ -100,36 +1091,710 @@
   <testcase name="Then I should receive short password &quot;* Minimum 8 characters required&quot; message" classname="Scenario: Invalid Password" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0">
+  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0.003">
+    <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
+</error>
+    <system-out><![CDATA[
+  Scenario: Invalid Password                                                       &amp#27;[90m# Registration.feature:45&amp#27;[0m
+    &amp#27;[33mWhen &amp#27;[0m&amp#27;[33mI enter "passWod" into the password input field&amp#27;[0m
+    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click the submit button&amp#27;[0m                                                  &amp#27;[90m# StepsDefinitions.i_click_the_submit_button()&amp#27;[0m
+    &amp#27;[33mThen &amp#27;[0m&amp#27;[33mI should receive short password "* Minimum 8 characters required" message&amp#27;[0m
+
+  Scenario Outline: Mismatching Passwords                                      &amp#27;[90m# Registration.feature:50&amp#27;[0m
+    &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI enter "<password>" and "<confirm_password>"&amp#27;[0m
+    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click the submit button&amp#27;[0m
+    &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should receive mismatched passwords "* Fields do not match" message&amp#27;[0m
+
+    Examples: 
+]]></system-out>
+  </testcase>
+  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0.022">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+</error>
+  </testcase>
+  <testcase name="Given I am a new user on the registration page" classname="| pa$$word | tHis$isMyPa$$ |" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in before hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.setUpSauce(Scenario)&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException: Name is null
+      	at java.lang.Enum.valueOf(Enum.java:236)
+      	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+      	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+      	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at org.junit.runners.Suite.runChild(Suite.java:128)
+      	at org.junit.runners.Suite.runChild(Suite.java:27)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+      	at org.junit.runners.Suite.runChild(Suite.java:128)
+      	at org.junit.runners.Suite.runChild(Suite.java:27)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="When I enter &quot;pa$$word&quot; and &quot;tHis$isMyPa$$&quot;" classname="| pa$$word | tHis$isMyPa$$ |" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+  Background:                                      &amp#27;[90m# Registration.feature:5&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="And I click the submit button" classname="| pa$$word | tHis$isMyPa$$ |" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Invalid Password" classname="Scenario: Invalid Password" time="0.199"/>
-  <testcase name="Given I am a new user on the registration page" classname="| pa$$word | tHis$isMyPa$$ |" time="0"/>
-  <testcase name="When I enter &quot;pa$$word&quot; and &quot;tHis$isMyPa$$&quot;" classname="| pa$$word | tHis$isMyPa$$ |" time="0"/>
-  <testcase name="And I click the submit button" classname="| pa$$word | tHis$isMyPa$$ |" time="0"/>
-  <testcase name="Then I should receive mismatched passwords &quot;* Fields do not match&quot; message" classname="| pa$$word | tHis$isMyPa$$ |" time="0"/>
-  <testcase name="| pa$$word | tHis$isMyPa$$ |" classname="| pa$$word | tHis$isMyPa$$ |" time="0.175"/>
-  <testcase name="Given I am a new user on the registration page" classname="Scenario: Duplicate Username Error Message" time="0"/>
-  <testcase name="Given a user has successfully registered with &quot;MMedis&quot; as a username" classname="Scenario: Duplicate Username Error Message" time="0"/>
-  <testcase name="When I enter valid data on the page in each field" classname="Scenario: Duplicate Username Error Message" time="0"/>
-  <testcase name="And I click the submit button" classname="Scenario: Duplicate Username Error Message" time="0"/>
-  <testcase name="Then I should receive username message &quot;Error: Username already exists&quot;" classname="Scenario: Duplicate Username Error Message" time="0.014">
-    <failure message="expected:&lt;[Error: Username already exists]&gt; but was:&lt;[]&gt;" type="junit.framework.ComparisonFailure"><![CDATA[junit.framework.ComparisonFailure: expected:<[Error: Username already exists]> but was:<[]>
-]]></failure>
+  <testcase name="Then I should receive mismatched passwords &quot;* Fields do not match&quot; message" classname="| pa$$word | tHis$isMyPa$$ |" time="0">
+    <skipped/>
   </testcase>
-  <testcase name="Scenario: Duplicate Username Error Message" classname="Scenario: Duplicate Username Error Message" time="0.014">
-    <failure message="expected:&lt;[Error: Username already exists]&gt; but was:&lt;[]&gt;" type="junit.framework.ComparisonFailure"><![CDATA[junit.framework.ComparisonFailure: expected:<[Error: Username already exists]> but was:<[]>
-]]></failure>
+  <testcase name="Scenario: Duplicate Username Error Message" classname="Scenario: Duplicate Username Error Message" time="0">
+    <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
+</error>
+    <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at org.junit.runners.Suite.runChild(Suite.java:128)
+      	at org.junit.runners.Suite.runChild(Suite.java:27)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.ExamplesRunner.run(ExamplesRunner.java:59)
+      	at org.junit.runners.Suite.runChild(Suite.java:128)
+      	at org.junit.runners.Suite.runChild(Suite.java:27)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.ScenarioOutlineRunner.run(ScenarioOutlineRunner.java:53)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
   </testcase>
-  <testcase name="Given I am a new user on the registration page" classname="Scenario: Duplicate E-mail Error Message" time="0"/>
-  <testcase name="Given a user has successfully registered with &quot;email@email.com&quot; as a E-mail" classname="Scenario: Duplicate E-mail Error Message" time="0"/>
-  <testcase name="When I register with valid data on the page in each field" classname="Scenario: Duplicate E-mail Error Message" time="0"/>
-  <testcase name="And I click the submit button" classname="Scenario: Duplicate E-mail Error Message" time="0"/>
-  <testcase name="Then I should receive email message &quot;Error: E-mail address already exists&quot;" classname="Scenario: Duplicate E-mail Error Message" time="0">
+  <testcase name="Scenario: Duplicate Username Error Message" classname="Scenario: Duplicate Username Error Message" time="0.002">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+</error>
+  </testcase>
+  <testcase name="Given I am a new user on the registration page" classname="Scenario: Duplicate Username Error Message" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in before hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.setUpSauce(Scenario)&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException: Name is null
+      	at java.lang.Enum.valueOf(Enum.java:236)
+      	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+      	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+      	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+
+  @Register
+  Scenario Outline: Mismatching Passwords                                      &amp#27;[90m# Registration.feature:57&amp#27;[0m
+    &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI enter "&amp#27;[0m&amp#27;[36m&amp#27;[1mpa$$word&amp#27;[0m&amp#27;[36m" and "&amp#27;[0m&amp#27;[36m&amp#27;[1mtHis$isMyPa$$&amp#27;[0m&amp#27;[36m"&amp#27;[0m                                &amp#27;[90m# StepsDefinitions.i_enter_and(String,String)&amp#27;[0m
+    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click the submit button&amp#27;[0m                                              &amp#27;[90m# StepsDefinitions.i_click_the_submit_button()&amp#27;[0m
+    &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should receive mismatched passwords "&amp#27;[0m&amp#27;[36m&amp#27;[1m* Fields do not match&amp#27;[0m&amp#27;[36m" message&amp#27;[0m &amp#27;[90m# StepsDefinitions.password_message(String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Given a user has successfully registered with &quot;MMedis&quot; as a username" classname="Scenario: Duplicate Username Error Message" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+  Background:                                      &amp#27;[90m# Registration.feature:5&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="When I enter valid data on the page in each field" classname="Scenario: Duplicate Username Error Message" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="And I click the submit button" classname="Scenario: Duplicate Username Error Message" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I should receive username message &quot;Error: Username already exists&quot;" classname="Scenario: Duplicate Username Error Message" time="0">
     <skipped/>
   </testcase>
   <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0">
+    <error message="Name is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Name is null
+</error>
+    <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0.038">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+</error>
+  </testcase>
+  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in after hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.tearDownLocal()&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException
+	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException
+      	at com.medis.bdd.StepsDefinitions.tearDownLocal(StepsDefinitions.java:291)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runAfterHooks(Runtime.java:205)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Given I am a new user on the registration page" classname="Scenario: Duplicate E-mail Error Message" time="0">
+    <skipped/>
+    <system-out><![CDATA[&amp#27;[31mFailure in before hook:&amp#27;[0m&amp#27;[31mStepsDefinitions.setUpSauce(Scenario)&amp#27;[0m
+&amp#27;[31mMessage: &amp#27;[0m&amp#27;[31mjava.lang.NullPointerException: Name is null
+	at java.lang.Enum.valueOf(Enum.java:236)
+	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:37)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+	at cucumber.runtime.Utils.invoke(Utils.java:31)
+	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+&amp#27;[0m
+      &amp#27;[31mjava.lang.NullPointerException: Name is null
+      	at java.lang.Enum.valueOf(Enum.java:236)
+      	at org.openqa.selenium.Platform.valueOf(Platform.java:30)
+      	at org.openqa.selenium.Platform.fromString(Platform.java:276)
+      	at org.openqa.selenium.remote.DesiredCapabilities.setCapability(DesiredCapabilities.java:175)
+      	at com.medis.bdd.StepsDefinitions.setUpSauce(StepsDefinitions.java:56)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+      	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+      	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+      	at java.lang.reflect.Method.invoke(Method.java:498)
+      	at cucumber.runtime.Utils$1.call(Utils.java:37)
+      	at cucumber.runtime.Timeout.timeout(Timeout.java:13)
+      	at cucumber.runtime.Utils.invoke(Utils.java:31)
+      	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
+      	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:223)
+      	at cucumber.runtime.Runtime.runHooks(Runtime.java:211)
+      	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:201)
+      	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
+      	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+      	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+      	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+      	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+      	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+      	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+      	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+      	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+      	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+      	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:367)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:274)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:238)
+      	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:161)
+      	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+      	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+      	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+      &amp#27;[0m
+
+  Scenario: Duplicate Username Error Message                                &amp#27;[90m# Registration.feature:59&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36ma user has successfully registered with "&amp#27;[0m&amp#27;[36m&amp#27;[1mMMedis&amp#27;[0m&amp#27;[36m" as a username&amp#27;[0m    &amp#27;[90m# StepsDefinitions.a_user_has_successfully_registered_with_as_a_username(String)&amp#27;[0m
+    &amp#27;[36mWhen &amp#27;[0m&amp#27;[36mI enter valid data on the page in each field&amp#27;[0m                       &amp#27;[90m# StepsDefinitions.i_enter_valid_data_on_the_page_in_each_field(DataTable)&amp#27;[0m
+    &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI click the submit button&amp#27;[0m                                           &amp#27;[90m# StepsDefinitions.i_click_the_submit_button()&amp#27;[0m
+    &amp#27;[36mThen &amp#27;[0m&amp#27;[36mI should receive username message "&amp#27;[0m&amp#27;[36m&amp#27;[1mError: Username already exists&amp#27;[0m&amp#27;[36m"&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_should_receive(String)&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="Given a user has successfully registered with &quot;email@email.com&quot; as a E-mail" classname="Scenario: Duplicate E-mail Error Message" time="0">
+    <skipped/>
+    <system-out><![CDATA[
+  Background:                                      &amp#27;[90m# Registration.feature:5&amp#27;[0m
+    &amp#27;[36mGiven &amp#27;[0m&amp#27;[36mI am a new user on the registration page&amp#27;[0m &amp#27;[90m# StepsDefinitions.i_am_a_new_user_on_the_registration_page()&amp#27;[0m
+]]></system-out>
+  </testcase>
+  <testcase name="When I register with valid data on the page in each field" classname="Scenario: Duplicate E-mail Error Message" time="0">
     <skipped/>
   </testcase>
-  <testcase name="Scenario: Duplicate E-mail Error Message" classname="Scenario: Duplicate E-mail Error Message" time="0.172"/>
+  <testcase name="And I click the submit button" classname="Scenario: Duplicate E-mail Error Message" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="Then I should receive email message &quot;Error: E-mail address already exists&quot;" classname="Scenario: Duplicate E-mail Error Message" time="0">
+    <skipped/>
+  </testcase>
 </testsuite>
