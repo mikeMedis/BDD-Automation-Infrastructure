@@ -16,3 +16,5 @@ bdd.iml
 .idea/uiDesigner.xml
 .idea/workspace.xml
 
+target/generated-test-sources/
+target
